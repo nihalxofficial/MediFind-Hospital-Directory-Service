@@ -1,4 +1,5 @@
 import AboutSection from "@/components/home/AboutSection";
+import FacilitiesSection from "@/components/home/FacilitiesSection";
 import Hero from "@/components/home/HeroSection";
 import HospitalsSection from "@/components/home/HospitalsSection";
 import ServicesSection from "@/components/home/ServicesSection";
@@ -12,6 +13,7 @@ const HomePage = () => {
       <HospitalsSection />
       <ServicesSection />
       <TestsSection />
+      <FacilitiesSection />
     </>
   );
 };
