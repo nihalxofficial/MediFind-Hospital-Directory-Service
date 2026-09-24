@@ -55,7 +55,7 @@ export default function Hero() {
         />
 
         {/* Gradient Overlay: Solid white/ice blue fade on the left, fading out on the right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/90 to-transparent lg:via-white/80" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/90 to-transparent lg:via-white/80" /> */}
 
         {/* Subtle Glow Spheres */}
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl pointer-events-none" />
