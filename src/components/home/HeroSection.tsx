@@ -105,7 +105,7 @@ export default function Hero() {
       </div>
 
       {/* Floating Overlapping Stats Bar (Half in Hero, Half in Next Section) */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 sm:-mt-15">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 sm:-mt-24">
         <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_20px_45px_rgba(0,0,0,0.07)]">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
             {stats.map((stat, idx) => {
