@@ -1,5 +1,6 @@
 import AboutSection from '@/components/home/AboutSection';
 import Hero from '@/components/home/HeroSection';
+import ServicesSection from '@/components/home/ServicesSection';
 import React from 'react';
 
 const HomePage = () => {
@@ -7,6 +8,7 @@ const HomePage = () => {
         <>
         <Hero/>
         <AboutSection/>
+        <ServicesSection/>
         </>
     );
 };
