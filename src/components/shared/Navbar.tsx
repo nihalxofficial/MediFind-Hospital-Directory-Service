@@ -36,7 +36,7 @@ export default function Navbar() {
     { name: 'Services', href: '#services', icon: Activity },
     { name: 'Doctors', href: '#doctors', icon: UserCheck },
     { name: 'Facilities', href: '#facilities', icon: Stethoscope },
-    { name: 'Contact', href: '#contact', icon: Phone },
+    { name: 'Contact', href: '/contact', icon: Phone },
   ];
 
   return (

@@ -133,7 +133,7 @@ export default function Footer() {
                 { name: 'Diagnostic Tests', href: '#tests' },
                 { name: 'Hospital Facilities', href: '#facilities' },
                 { name: 'Emergency ER Ward', href: '#emergency' },
-                { name: 'About MediFind', href: '#about' },
+                { name: 'Contact & Support', href: '/contact' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link 
