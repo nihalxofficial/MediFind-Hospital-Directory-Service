@@ -46,7 +46,7 @@ export default function Hero() {
     <section className="relative bg-slate-50">
       
       {/* Hero Wrapper with Full Background Image */}
-      <div className="relative min-h-[580px] lg:min-h-[640px] flex items-center pt-12 pb-32 overflow-hidden">
+      <div className="relative min-h-[540px] lg:min-h-[580px] flex items-center pt-12 pb-16 lg:pb-20 overflow-hidden">
         
         {/* Full-bleed Background Image */}
         <div 
@@ -105,26 +105,26 @@ export default function Hero() {
       </div>
 
       {/* Floating Overlapping Stats Bar (Half in Hero, Half in Next Section) */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 sm:-mt-24">
-        <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_20px_45px_rgba(0,0,0,0.07)]">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+      <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-8 md:-mt-10 -mb-10 sm:-mb-14 md:-mb-16 lg:-mb-20">
+        <div className="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 md:p-6 lg:p-7 border border-slate-200/80 shadow-[0_15px_35px_rgba(0,0,0,0.06)] sm:shadow-[0_20px_45px_rgba(0,0,0,0.08)]">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-8 lg:divide-x lg:divide-slate-100">
             {stats.map((stat, idx) => {
               const Icon = stat.icon;
               return (
                 <div 
                   key={stat.label} 
-                  className={`flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-4 text-center sm:text-left ${
-                    idx !== 0 ? 'pt-6 md:pt-0 md:pl-6' : ''
+                  className={`flex items-center gap-2.5 sm:gap-3.5 lg:gap-4 ${
+                    idx !== 0 ? 'lg:pl-6 xl:pl-8' : ''
                   }`}
                 >
-                  <div className={`p-3.5 rounded-2xl border shadow-xs ${stat.iconBg}`}>
-                    <Icon className="w-6 h-6" />
+                  <div className={`p-2 sm:p-2.5 lg:p-3.5 rounded-xl sm:rounded-2xl border shadow-xs shrink-0 ${stat.iconBg}`}>
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
                   </div>
-                  <div>
-                    <div className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                  <div className="min-w-0">
+                    <div className="text-base sm:text-2xl lg:text-3xl font-black text-slate-900 tracking-tight leading-tight">
                       {stat.value}
                     </div>
-                    <div className="text-xs sm:text-sm font-medium text-slate-500 mt-0.5">
+                    <div className="text-[11px] sm:text-xs lg:text-sm font-medium text-slate-500 truncate sm:whitespace-normal">
                       {stat.label}
                     </div>
                   </div>
