@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className={jakarta.variable}>
       <body className="antialiased overflow-x-hidden">
         <Navbar />
-        <main className="pt-24">{children}</main>
+        <main className="">{children}</main>
       </body>
     </html>
   );
