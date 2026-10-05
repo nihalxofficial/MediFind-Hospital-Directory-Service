@@ -128,11 +128,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               {[
-                { name: 'Find Hospitals', href: '#hospitals' },
-                { name: 'Medical Services', href: '#services' },
-                { name: 'Diagnostic Tests', href: '#tests' },
-                { name: 'Hospital Facilities', href: '#facilities' },
-                { name: 'Emergency ER Ward', href: '#emergency' },
+                { name: 'Find Hospitals', href: '/hospitals' },
+                { name: 'Medical Services', href: '/services' },
+                { name: 'Diagnostic Tests', href: '/tests' },
+                { name: 'Hospital Facilities', href: '/facilities' },
+                { name: 'Doctors Directory', href: '/doctors' },
+                { name: 'Emergency ER Ward', href: '/#emergency' },
                 { name: 'Contact & Support', href: '/contact' },
               ].map((item) => (
                 <li key={item.name}>
@@ -155,12 +156,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               {[
-                { name: 'Cardiology & Heart Institute', href: '#services' },
-                { name: 'Neurology & Spine Surgery', href: '#services' },
-                { name: 'Pediatrics & Level-III NICU', href: '#services' },
-                { name: '3T MRI & High-Speed CT Scans', href: '#tests' },
-                { name: 'Robotic Surgery Suites', href: '#facilities' },
-                { name: 'Level-1 Trauma & Helipad ER', href: '#emergency' },
+                { name: 'Cardiology & Heart Institute', href: '/services' },
+                { name: 'Neurology & Spine Surgery', href: '/services' },
+                { name: 'Pediatrics & Level-III NICU', href: '/services' },
+                { name: '3T MRI & High-Speed CT Scans', href: '/tests' },
+                { name: 'Robotic Surgery Suites', href: '/facilities' },
+                { name: 'Level-1 Trauma & Helipad ER', href: '/#emergency' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link 
@@ -205,13 +206,13 @@ export default function Footer() {
 
             {/* Quick Consultation Trigger */}
             <div className="pt-2">
-              <a
-                href="#book"
+              <Link
+                href="/appointment"
                 className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs border border-slate-800 hover:border-slate-700 transition-all shadow-xs"
               >
                 <Stethoscope className="w-3.5 h-3.5 text-blue-400" />
                 <span>Book Doctor Appointment</span>
-              </a>
+              </Link>
             </div>
 
           </div>
