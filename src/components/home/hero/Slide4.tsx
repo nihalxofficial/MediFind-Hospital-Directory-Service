@@ -59,7 +59,7 @@ export default function Slide4() {
           {/* Call To Action Buttons */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3.5 pt-2">
             <a
-              href="#hospitals"
+              href="/hospitals"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base shadow-[0_10px_25px_rgba(5,150,105,0.28)] hover:shadow-[0_14px_28px_rgba(5,150,105,0.38)] transition-all duration-300 hover:-translate-y-0.5 group border border-emerald-400/30"
             >
               <Building2 className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -68,7 +68,7 @@ export default function Slide4() {
             </a>
 
             <a
-              href="#services"
+              href="/doctors"
               className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-2xl bg-white/90 hover:bg-white text-slate-800 font-bold text-sm sm:text-base border border-slate-200/90 shadow-[0_4px_14px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_18px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-md"
             >
               <Users className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />

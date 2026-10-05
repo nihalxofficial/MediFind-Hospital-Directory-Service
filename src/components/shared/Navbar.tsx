@@ -31,11 +31,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#', icon: Home },
-    { name: 'Hospitals', href: '#hospitals', icon: Building2 },
-    { name: 'Services', href: '#services', icon: Activity },
-    { name: 'Doctors', href: '#doctors', icon: UserCheck },
-    { name: 'Facilities', href: '#facilities', icon: Stethoscope },
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'Hospitals', href: '/hospitals', icon: Building2 },
+    { name: 'Services', href: '/services', icon: Activity },
+    { name: 'Doctors', href: '/doctors', icon: UserCheck },
+    { name: 'Facilities', href: '/facilities', icon: Stethoscope },
     { name: 'Contact', href: '/contact', icon: Phone },
   ];
 
@@ -103,27 +103,26 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
 
             {/* Book Appointment Soft UI Button */}
-            <a
-              href="#book"
+            <Link
+              href="/appointment"
               className="relative group inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-700 hover:to-indigo-800 text-white text-sm font-bold px-5 py-2.5 rounded-2xl shadow-[0_10px_25px_rgba(37,99,235,0.3)] hover:shadow-[0_14px_28px_rgba(37,99,235,0.4)] transition-all duration-300 hover:-translate-y-0.5 border border-blue-400/30"
             >
               <div className="flex items-center justify-center w-7 h-7 rounded-xl bg-white/15 text-white group-hover:bg-white/25 transition-colors shadow-inner">
                 <CalendarDays className="w-4 h-4 text-blue-100 group-hover:scale-110 transition-transform" />
               </div>
               <span className="tracking-wide">Book Appointment</span>
-              {/* <ArrowRight className="w-4 h-4 text-blue-200 group-hover:translate-x-1 transition-transform" /> */}
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Buttons */}
           <div className="flex lg:hidden items-center gap-2">
-            <a
-              href="#book"
+            <Link
+              href="/appointment"
               className="p-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl shadow-[0_6px_16px_rgba(37,99,235,0.3)] active:scale-95 transition-transform"
               aria-label="Book Appointment"
             >
               <CalendarDays className="w-5 h-5" />
-            </a>
+            </Link>
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -173,14 +172,14 @@ export default function Navbar() {
           </div>
 
           <div className="pt-3 border-t border-slate-100">
-            <a
-              href="#book"
+            <Link
+              href="/appointment"
               onClick={() => setIsMobileMenuOpen(false)}
               className="flex items-center justify-center gap-2.5 w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3.5 rounded-xl shadow-[0_10px_25px_rgba(37,99,235,0.3)] active:scale-98 transition-all"
             >
               <CalendarDays className="w-5 h-5 text-blue-100" />
               <span>Book Appointment Now</span>
-            </a>
+            </Link>
           </div>
         </div>
       )}
