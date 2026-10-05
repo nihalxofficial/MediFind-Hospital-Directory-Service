@@ -1,20 +1,30 @@
 'use client';
 
+import React from 'react';
 import { 
-  HeartPulse, 
-  ArrowRight, 
-  CalendarDays, 
   Users, 
   Building2, 
   Star, 
-  HeartHandshake 
+  HeartHandshake,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
-import heroBg from "@/assets/hero-bg.png"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
+
+// Swiper core & module styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+
+// Individual Slide Components
+import Slide1 from './hero/Slide1';
+import Slide2 from './hero/Slide2';
+import Slide3 from './hero/Slide3';
+import Slide4 from './hero/Slide4';
 
 export default function Hero() {
-  // Replace with your background image path (e.g., "/hero-bg.jpg")
-  const bgImageUrl = heroBg.src;
-
   const stats = [
     { 
       icon: Users, 
@@ -43,65 +53,73 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative bg-slate-50">
+    <section className="relative bg-slate-50 hero-slider-container">
       
-      {/* Hero Wrapper with Full Background Image */}
-      <div className="relative min-h-[540px] lg:min-h-[580px] flex items-center pt-12 pb-16 lg:pb-20 overflow-hidden">
-        
-        {/* Full-bleed Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${bgImageUrl})` }}
-        />
+      {/* Main Swiper Hero Slider */}
+      <div className="relative w-full">
+        <Swiper
+          modules={[Autoplay, Pagination, Navigation, EffectFade]}
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
+          loop={true}
+          speed={900}
+          autoplay={{
+            delay: 6000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          pagination={{
+            clickable: true,
+            el: '.hero-custom-pagination',
+            bulletClass: 'hero-custom-bullet',
+            bulletActiveClass: 'hero-custom-bullet-active',
+          }}
+          navigation={{
+            prevEl: '.hero-prev-btn',
+            nextEl: '.hero-next-btn',
+          }}
+          className="w-full"
+        >
+          {/* Slide 1 - Left Design & Right Hospital Outside Scenery */}
+          <SwiperSlide>
+            <Slide1 />
+          </SwiperSlide>
 
-        {/* Gradient Overlay: Solid white/ice blue fade on the left, fading out on the right */}
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/90 to-transparent lg:via-white/80" /> */}
+          {/* Slide 2 - Left Hospital Emergency Outside & Right Design */}
+          <SwiperSlide>
+            <Slide2 />
+          </SwiperSlide>
 
-        {/* Subtle Glow Spheres */}
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-10 left-1/3 w-80 h-80 bg-indigo-200/20 rounded-full blur-3xl pointer-events-none" />
+          {/* Slide 3 - Left Design & Right Advanced Medical Center Scenery */}
+          <SwiperSlide>
+            <Slide3 />
+          </SwiperSlide>
 
-        {/* Left-Aligned Hero Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="max-w-2xl space-y-6 sm:space-y-8 text-left">
-            
-            {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100/80 border border-blue-200 text-blue-700 text-sm font-semibold shadow-xs backdrop-blur-md">
-              <HeartPulse className="w-4 h-4 text-blue-600 animate-pulse" />
-              <span>Your Health, Our Priority</span>
-            </div>
+          {/* Slide 4 - Left Regional Hospital Campus & Right Design */}
+          <SwiperSlide>
+            <Slide4 />
+          </SwiperSlide>
+        </Swiper>
 
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-              Best Service for Your <span className="text-blue-600"> Health</span> and <span className="text-blue-600">  Family </span>
-            </h1>
+        {/* Custom Navigation Arrows */}
+        <button
+          type="button"
+          aria-label="Previous Slide"
+          className="hero-prev-btn absolute left-2 sm:left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/80 hover:bg-white text-slate-800 flex items-center justify-center backdrop-blur-md border border-slate-200/80 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+        >
+          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-slate-700" />
+        </button>
 
-            {/* Subtitle */}
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
-              We are here with quality medical services, experienced doctors, and modern facilities to provide the best care for you and your loved ones.
-            </p>
+        <button
+          type="button"
+          aria-label="Next Slide"
+          className="hero-next-btn absolute right-2 sm:right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/80 hover:bg-white text-slate-800 flex items-center justify-center backdrop-blur-md border border-slate-200/80 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+        >
+          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-slate-700" />
+        </button>
 
-            {/* Call To Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-start gap-4 pt-2">
-              <a
-                href="#services"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-base shadow-[0_10px_25px_rgba(37,99,235,0.3)] hover:shadow-[0_14px_28px_rgba(37,99,235,0.4)] transition-all duration-300 hover:-translate-y-0.5 group border border-blue-400/30"
-              >
-                <span>See Services</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-
-              <a
-                href="#book"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-white/90 hover:bg-white text-slate-800 font-bold text-base border border-slate-200/80 shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_16px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-md"
-              >
-                <CalendarDays className="w-5 h-5 text-blue-600" />
-                <span>Make Appointment</span>
-              </a>
-            </div>
-
-          </div>
-        </div>
+        {/* Custom Bullet Pagination Dots */}
+        <div className="hero-custom-pagination absolute bottom-16 sm:bottom-20 lg:bottom-24 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 pointer-events-auto" />
       </div>
 
       {/* Floating Overlapping Stats Bar (Half in Hero, Half in Next Section) */}

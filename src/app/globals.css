@@ -1,3 +1,26 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
 
+/* Hero Swiper Custom Pagination */
+.hero-custom-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: rgba(100, 116, 139, 0.4);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.hero-custom-bullet:hover {
+  background: rgba(37, 99, 235, 0.7);
+  transform: scale(1.2);
+}
+
+.hero-custom-bullet-active {
+  width: 32px;
+  border-radius: 9999px;
+  background: rgb(37, 99, 235);
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.5);
+}
