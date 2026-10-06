@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="pwa-maskable-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Full Bleed Background for Maskable Icon -->
+  <rect width="512" height="512" fill="url(#pwa-maskable-grad)" />
+
+  <!-- Inner Safe Zone Content -->
+  <!-- Heart & Pulse Waveform Icon Centered in Safe Area (80% diameter circle) -->
+  <g transform="translate(136, 136) scale(10)" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" fill="rgba(255, 255, 255, 0.15)" />
+    <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h4.27" />
+  </g>
+
+  <!-- Live Status Dot inside safe zone -->
+  <circle cx="380" cy="130" r="28" fill="#10b981" stroke="#ffffff" stroke-width="10" />
+</svg>

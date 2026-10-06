@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="pwa-grad-192" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="pwa-shadow-192" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#2563eb" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Background -->
+  <rect x="16" y="16" width="160" height="160" rx="44" ry="44" fill="url(#pwa-grad-192)" filter="url(#pwa-shadow-192)" />
+  <rect x="17.5" y="17.5" width="157" height="157" rx="42.5" ry="42.5" fill="none" stroke="#ffffff" stroke-width="3" stroke-opacity="0.3" />
+
+  <!-- Heart & Pulse Waveform Icon -->
+  <g transform="translate(44, 44) scale(4.333)" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" fill="rgba(255, 255, 255, 0.12)" />
+    <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h4.27" />
+  </g>
+
+  <!-- Live 24/7 Status Dot -->
+  <circle cx="152" cy="40" r="14" fill="#10b981" stroke="#ffffff" stroke-width="6" />
+</svg>
