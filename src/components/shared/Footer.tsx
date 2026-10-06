@@ -130,9 +130,9 @@ export default function Footer() {
               {[
                 { name: 'Find Hospitals', href: '/hospitals' },
                 { name: 'Medical Services', href: '/services' },
-                { name: 'Diagnostic Tests', href: '/tests' },
-                { name: 'Hospital Facilities', href: '/facilities' },
                 { name: 'Doctors Directory', href: '/doctors' },
+                { name: 'Diagnostic Tests', href: '/tests' },
+                { name: 'Book Appointment', href: '/appointment' },
                 { name: 'Emergency ER Ward', href: '/#emergency' },
                 { name: 'Contact & Support', href: '/contact' },
               ].map((item) => (
@@ -160,7 +160,7 @@ export default function Footer() {
                 { name: 'Neurology & Spine Surgery', href: '/services' },
                 { name: 'Pediatrics & Level-III NICU', href: '/services' },
                 { name: '3T MRI & High-Speed CT Scans', href: '/tests' },
-                { name: 'Robotic Surgery Suites', href: '/facilities' },
+                { name: 'Blood Pathology & Panels', href: '/tests' },
                 { name: 'Level-1 Trauma & Helipad ER', href: '/#emergency' },
               ].map((item) => (
                 <li key={item.name}>

@@ -14,6 +14,14 @@ export const metadata: Metadata = {
   title: "MediFind · Find Your Perfect Healthcare",
   description:
     "Compare top hospitals, verified doctors, and diagnostic tests with transparent pricing.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-icon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export default function RootLayout({

@@ -14,7 +14,8 @@ import {
   CalendarDays, 
   Menu, 
   X,
-  ArrowRight
+  ArrowRight,
+  FlaskConical
 } from 'lucide-react';
 
 export default function Navbar() {
@@ -35,7 +36,7 @@ export default function Navbar() {
     { name: 'Hospitals', href: '/hospitals', icon: Building2 },
     { name: 'Services', href: '/services', icon: Activity },
     { name: 'Doctors', href: '/doctors', icon: UserCheck },
-    { name: 'Facilities', href: '/facilities', icon: Stethoscope },
+    { name: 'Tests', href: '/tests', icon: FlaskConical },
     { name: 'Contact', href: '/contact', icon: Phone },
   ];
 
